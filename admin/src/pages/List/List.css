@@ -1,0 +1,101 @@
+/* Container */
+.list {
+  width: 100%;
+  padding: 20px;
+  background: #f9fafb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+.list p {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Table Wrapper */
+.list-table {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Table Header */
+.list-table-format.title {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 100px 80px;
+  padding: 15px 20px;
+  background: #4f46e5;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Table Rows */
+.list-table-format {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 100px 80px;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+/* Hover Effect */
+.list-table-format:hover {
+  background: #f3f4f6;
+}
+
+/* Image Styling */
+.list-table-format img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Text */
+.list-table-format p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Price */
+.list-table-format p:nth-child(4) {
+  font-weight: 600;
+  color: #16a34a;
+}
+
+/* Delete Button (X) */
+.list-table-format p:last-child {
+  color: #dc2626;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.list-table-format p:last-child:hover {
+  color: #b91c1c;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .list-table-format,
+  .list-table-format.title {
+    grid-template-columns: 60px 1fr 1fr 80px 60px;
+    font-size: 12px;
+  }
+
+  .list-table-format img {
+    width: 40px;
+    height: 40px;
+  }
+}
